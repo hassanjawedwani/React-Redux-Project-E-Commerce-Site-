@@ -1,0 +1,21 @@
+form {
+    width: 300px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+input[type="password"] {
+    margin-bottom: 20px;
+}
+
+button {
+    border: 3px solid grey;
+    background-color: lightgreen;
+}
+
+button:active {
+    background-color: darkgrey;
+}
