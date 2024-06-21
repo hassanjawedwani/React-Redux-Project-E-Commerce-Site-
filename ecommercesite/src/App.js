@@ -8,7 +8,6 @@ import Register from "./components/Register";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/addproduct" element={<AddProduct />}/>
         <Route path="/updateproduct" element={<UpdateProduct />}/>

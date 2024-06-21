@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Register.css';
+import { useNavigate } from 'react-router';
 const Register = () => {
 
   const [data, setData] = useState({
@@ -7,6 +8,7 @@ const Register = () => {
     password: ''
   });
 
+  const navigate = useNavigate();
   const handlerEmail = e => {
     setData(prevData => ({
       ...prevData,
@@ -36,10 +38,15 @@ const Register = () => {
     }
   }
 
-  const handlerSubmit = e => {
-    e.preventDefault(); //remove it
-    AddApi();
-    
+  const handlerSubmit = async(e)=> {
+    try {
+      e.preventDefault();
+      await AddApi();
+      localStorage.setItem("userInfo", JSON.stringify(data));
+      navigate('/addproduct');
+    } catch(error) {
+      console.error("error occured in submition", error);
+    }
   }
 
   return (
