@@ -1,9 +1,13 @@
+#navbarContainer {
+    display: flex;
+}
 #navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     height: 40px;
+    flex: 9;
 }
 
 #navbar .active {
@@ -22,3 +26,6 @@
     color: white;
 }
 
+#profile {
+    flex: 1;
+}
